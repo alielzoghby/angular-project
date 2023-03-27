@@ -1,0 +1,43 @@
+<div
+  class="body"
+  [ngClass]="theme == 1 ? 'standard' : theme == 2 ? 'light' : 'darker'"
+>
+  <app-change-theme></app-change-theme>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">{{ str }}</div>
+      </div>
+
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slider" id="login" (click)="goLogin()" />
+          <input type="radio" name="slider" id="signup" (click)="goSignup()" />
+
+          <label for="login" class="slide text-login">Login</label>
+          <label for="signup" class="slide text-signup">Sign up</label>
+          <div class="slide-tab"></div>
+        </div>
+
+        <div class="form-inner">
+          <app-login *ngIf="login"></app-login>
+          <app-sign-up *ngIf="signUp"></app-sign-up>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="all-links">
+      <a class="links" href="https://alielzoghby.github.io/doc/"
+        >Documentation</a
+      >
+      <a class="links" href="https://github.com/alielzoghby">GitHub</a>
+      <a class="links" href="https://www.linkedin.com/in/ali-s-ahmed-9061461a6/"
+        >Linked In</a
+      >
+    </div>
+
+    <p style="opacity: 0.75">Made with 🤍 by Ali Saad</p>
+  </footer>
+</div>

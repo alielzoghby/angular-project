@@ -1,0 +1,47 @@
+<form class="login" #form="ngForm" (ngSubmit)="getLogin(form)">
+  <div class="field">
+    <input
+      id="uname"
+      type="text"
+      maxlength="22"
+      required
+      name="userName"
+      ngModel
+      #userName="ngModel"
+      require
+    />
+    <label>User Name</label>
+    <p id="alert" *ngIf="userName.touched && userName.errors?.['required']">
+      username is required
+    </p>
+  </div>
+
+  <div class="field box-pass">
+    <input
+      id="lpass"
+      class="password"
+      type="password"
+      maxlength="32"
+      required
+      require
+      name="password"
+      ngModel
+      #password="ngModel"
+    />
+    <label>Password</label>
+    <i class="icon-password bi-eye-slash-fill"></i>
+
+    <p id="alert" *ngIf="password.touched && password.errors?.['required']">
+      The password is required
+    </p>
+  </div>
+  <p id="alert" *ngIf="wrong">Wrong username or password</p>
+  <div class="field">
+    <input
+      class="btn btn-login"
+      type="submit"
+      value="Login"
+      [disabled]="!form.valid"
+    />
+  </div>
+</form>

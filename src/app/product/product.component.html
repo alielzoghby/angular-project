@@ -1,0 +1,14 @@
+<div class="row gap-3 justify-content-center">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let prod of myproduct.products"
+  >
+    <img class="card-img-top" src="{{ prod.thumbnail }}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ prod.title }}</h5>
+      <p class="card-text">{{ prod.description }}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>

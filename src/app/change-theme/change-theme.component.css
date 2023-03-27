@@ -1,0 +1,63 @@
+#header {
+  min-height: 5vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 3rem;
+  min-height: 5vh;
+}
+
+/* Theme buttons div */
+.flexrow-container {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 1%;
+}
+
+.theme-selector {
+  border: 1px solid #d1dae3;
+  border-radius: 100%;
+  height: 35px;
+  margin: 0 8px;
+  transition: tranform 150ms ease-in-out, box-shadow 200ms ease-in-out;
+  width: 35px;
+}
+
+.theme-selector:hover {
+  box-shadow: white 0 0 8px;
+  cursor: pointer;
+}
+
+.active {
+  transform: scale(0.95);
+}
+
+.standard-theme {
+  background-image: linear-gradient(100deg, #575656, #062e3f);
+}
+
+.light-theme {
+  background-image: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+.darker-theme {
+  background-image: linear-gradient(100deg, #001214, #001f29);
+}
+
+@media only screen and (max-width: 800px) {
+  .theme-selector {
+    height: 25px;
+    width: 25p;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .theme-selector {
+    height: 15px;
+    width: 15p;
+  }
+}

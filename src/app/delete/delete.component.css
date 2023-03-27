@@ -1,0 +1,248 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
+}
+
+/* Body light or darker themes */
+.standard {
+  background-image: linear-gradient(100deg, #575656, #062e3f);
+  color: #ffdfdb;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.light {
+  background-image: linear-gradient(135deg, #8052ec, #d161ff);
+  color: #1a150e;
+  transition: 0.3s linear;
+}
+
+.darker {
+  background-image: linear-gradient(100deg, #001214, #001f29);
+  color: white;
+  transition: 0.3s linear;
+}
+
+#header {
+  margin: 0 1rem;
+  min-height: 10vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+  padding-top: 10px;
+}
+
+/* Theme buttons div */
+.flexrow-container {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 3%;
+}
+
+.theme-selector {
+  border: 1px solid #d1dae3;
+  border-radius: 100%;
+  height: 35px;
+  margin: 0 8px;
+  transition: tranform 150ms ease-in-out, box-shadow 200ms ease-in-out;
+  width: 35px;
+}
+
+.theme-selector:hover {
+  box-shadow: white 0 0 8px;
+  cursor: pointer;
+}
+
+.active {
+  transform: scale(0.95);
+}
+
+.standard-theme {
+  background-image: linear-gradient(100deg, #575656, #062e3f);
+}
+
+.light-theme {
+  background-image: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+.darker-theme {
+  background-image: linear-gradient(100deg, #001214, #001f29);
+}
+
+/* Animation */
+#title {
+  border-right: solid 3px rgba(0, 0, 0, 0.75);
+  white-space: pre;
+  overflow: hidden;
+  letter-spacing: 0.2rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 480px;
+  color: #fff;
+  font-size: 55px;
+  animation: animated-text 2s steps(11, end) 0.5s 1 normal both,
+    animated-cursor 750ms steps(11, end) infinite;
+  margin: 0 auto;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 470px;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Responsive design */
+@media only screen and (max-width: 1000px) {
+  .flexrow-container {
+    align-self: unset;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #header {
+    font-size: 2rem;
+  }
+
+  #title {
+    animation: animated-text 3s steps(16, end) 0.5s 1 normal both,
+      animated-cursor 750ms steps(16, end) infinite;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    max-width: 330px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #header {
+    font-size: 1.5rem;
+  }
+
+  #title {
+    animation: animated-text 3.5s steps(16, end) 0.5s 1 normal both,
+      animated-cursor 750ms steps(16, end) infinite;
+    max-width: 255px;
+  }
+}
+
+.container {
+  width: 50%;
+  padding: 40px;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+#newTask {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#newTask input {
+  width: 75%;
+  height: 60px;
+  font-size: 20px;
+  padding: 15px;
+  border: 2px solid #d1d3d4;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+}
+
+#newTask input:focus {
+  outline: none;
+  border-color: #8052ec;
+}
+
+#newTask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #8052ec;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#tasks {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+}
+
+@media all and (max-width: 1500px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    width: 90%;
+    min-width: 320px;
+    padding: 20px;
+  }
+  #newTask {
+    padding: 15px;
+  }
+  #newTask input {
+    height: 45px;
+    font-size: 15px;
+    padding: 10px;
+  }
+  #newTask button {
+    height: 45px;
+    font-size: 15px;
+  }
+  #tasks {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  .task {
+    height: 45px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .task span {
+    font-size: 15px;
+  }
+  .task button {
+    width: 23px;
+  }
+}

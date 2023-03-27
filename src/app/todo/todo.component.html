@@ -1,0 +1,24 @@
+<div class="task">
+  <span
+    class="task-name"
+    [ngClass]="{ completed: todo.complet }"
+    (click)="navigateToDetails(i)"
+    >{{ todo.title }}</span
+  >
+
+  <div class="btns">
+    <button
+      class="favorite"
+      (click)="favouriteTodo(i, id)"
+      [ngClass]="{ fav: todo.favourite }"
+    >
+      <i class="fas">&#xf005;</i>
+    </button>
+    <button class="completed-btn" (click)="combleteTodo(i, id)">
+      <i class="fas">&#xf00c;</i>
+    </button>
+    <button class="delete" id="todo.id" (click)="removeTodo(i, id)">
+      <i class="fas">&#xf2ed;</i>
+    </button>
+  </div>
+</div>

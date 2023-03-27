@@ -1,0 +1,23 @@
+<div
+  class="body"
+  [ngClass]="theme == 1 ? 'standard' : theme == 2 ? 'light' : 'darker'"
+>
+  <app-nav> </app-nav>
+  <app-change-theme></app-change-theme>
+
+  <h1 id="title">
+    deleted Todo.
+    <div id="border"></div>
+  </h1>
+
+  <div class="container">
+    <div id="tasks">
+      <app-delete-todo
+        *ngFor="let todo of deleted; let i = index"
+        [todo]="todo"
+        [i]="i"
+        [id]="todo.id"
+      ></app-delete-todo>
+    </div>
+  </div>
+</div>

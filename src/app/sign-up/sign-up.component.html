@@ -1,0 +1,74 @@
+<form class="signup" [formGroup]="myForm" (ngSubmit)="signup()">
+  <div class="field">
+    <input
+      id="username"
+      type="text"
+      maxlength="22"
+      required
+      formControlName="username"
+    />
+    <label>Username</label>
+    <p
+      id="alert"
+      *ngIf="myForm.get('username')?.touched && myForm.get('username')?.errors?.['required']
+    "
+    >
+      The username is required
+    </p>
+
+    <p
+      *ngIf="myForm.get('username')?.touched && myForm.errors?.['user_match']"
+      id="alert"
+    >
+      This name has already been used
+    </p>
+  </div>
+
+  <div class="field box-pass">
+    <input
+      id="pass"
+      class="password"
+      type="password"
+      maxlength="32"
+      formControlName="password"
+      required
+    />
+    <label>Password</label>
+    <i class="icon-password bi-eye-slash-fill"></i>
+    <p
+      id="alert"
+      *ngIf="
+        myForm.get('password')?.touched &&
+        myForm.get('password')?.errors?.['required']
+      "
+    >
+      The password is required
+    </p>
+  </div>
+
+  <div class="field box-pass">
+    <input
+      id="cpass"
+      class="password"
+      type="password"
+      maxlength="32"
+      formControlName="repassword"
+      required
+    />
+    <label>Confirm password</label>
+    <i class="icon-password bi-eye-slash-fill"></i>
+
+    <p
+      id="alert"
+      *ngIf="myForm.errors?.['match_error'] && myForm.get('repassword')?.touched"
+    >
+      Password is not match
+    </p>
+  </div>
+
+  <div class="field">
+    <button class="btn btn-signup" type="submit">
+      <span class="btn__text">Sign up</span>
+    </button>
+  </div>
+</form>

@@ -1,0 +1,50 @@
+.task {
+  background-color: #fff;
+  height: 60px;
+  padding: 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-betweens;
+  border-bottom: 2px solid #d1d3d4;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.task:first-of-type {
+  margin-top: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.394) !important;
+}
+.fav {
+  color: red !important;
+}
+
+.task span {
+  font-size: 20px;
+  font-weight: 400;
+  flex-grow: 2;
+  color: black;
+  display: inline-block;
+}
+
+.btns {
+  display: flex;
+  gap: 7px;
+  height: 35px;
+}
+
+.task button {
+  background-color: #8052ec;
+  color: #fff;
+  height: 100%;
+  width: 35px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

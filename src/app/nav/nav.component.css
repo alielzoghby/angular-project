@@ -1,0 +1,237 @@
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.collapsed {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  background: transparent;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 20px 25px;
+}
+
+/* NAV DESKTOP */
+
+nav .desktop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+nav .desktop .desktop__logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav .desktop .desktop__logo a {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.6s ease;
+  animation: texto-parpadeo 3s linear infinite;
+}
+
+nav .desktop .desktop__logo a:hover {
+  transform: scale(1.2);
+}
+
+nav .desktop .desktop__links,
+nav .desktop .desktop__links-mini {
+  display: flex;
+}
+
+nav .desktop .desktop__links a {
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: all 0.5s ease;
+}
+
+nav .desktop .desktop__links a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+nav .desktop .desktop__links-mini {
+  display: none;
+}
+
+nav .desktop .desktop__search {
+  display: flex;
+  gap: 10px;
+}
+
+nav .desktop .desktop__search input {
+  background: rgba(0, 0, 0, 0.1);
+  max-width: 150px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: all 0.6s ease;
+}
+
+nav .desktop .desktop__search input:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+nav .desktop .desktop__search input::placeholder {
+  color: #ffffff;
+  text-align: center;
+}
+
+nav .desktop .desktop__search button {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+nav .desktop .desktop__search button:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 20px #ffffff;
+}
+
+@media screen and (max-width: 940px) {
+  nav .desktop .desktop__links {
+    display: none;
+  }
+
+  nav .desktop .desktop__links-mini {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+
+  nav .desktop .desktop__links-mini .submenu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 120px;
+    right: 0;
+    overflow: hidden;
+  }
+
+  nav .desktop .desktop__links-mini button {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+
+  nav .desktop .desktop__links-mini button:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  nav .desktop .desktop__links-mini:hover .submenu {
+    display: block;
+  }
+
+  nav .desktop .desktop__links-mini .submenu a {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+}
+
+@keyframes texto-parpadeo {
+  0% {
+    opacity: 0.1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  2% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  8% {
+    opacity: 0.1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  9% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  12% {
+    opacity: 0.1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  20% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  25% {
+    opacity: 0.3;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  30% {
+    opacity: 1;
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  50% {
+    opacity: 0.9;
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  70% {
+    opacity: 0.7;
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  72% {
+    opacity: 0.2;
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  77% {
+    opacity: 0.9;
+    text-shadow: 0 0 20px #ffffff;
+  }
+  100% {
+    opacity: 0.9;
+    text-shadow: 0 0 20px #ffffff;
+  }
+}
+
+.person {
+  cursor: pointer;
+}
+
+.person:hover {
+  text-shadow: 0 0 20px #ffffff;
+}
+
+.logo {
+  font-weight: 800;
+}

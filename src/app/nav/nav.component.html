@@ -1,0 +1,65 @@
+<header>
+  <nav>
+    <div class="desktop">
+      <div class="desktop__logo">
+        <a [routerLink]="['/todos']" routerLinkActive="active" class="logo">TODO</a>
+        <span class="person">
+          <i class="fas">&#xf2bd;</i> username:
+          {{ todosForUser[0].userName }}</span
+        >
+      </div>
+
+      <div class="desktop__links">
+        <a [routerLink]="['/todos/favourite']" routerLinkActive="active"
+          >Favorite <i class="fas"> &#xf005; </i>
+          {{ todosForUser[0].favourite.length }}</a
+        >
+        <a [routerLink]="['/todos/delete']" routerLinkActive="active"
+          >Deleted <i class="fas"> &#xf1f8;</i>
+          {{ todosForUser[0].deleted.length }}</a
+        >
+        <a [routerLink]="['/todos/completed']" routerLinkActive="active"
+          >Completed <i class="fas"> &#xf164;</i>
+          {{ todosForUser[0].completed.length }} /
+          {{ todosForUser[0].todos.length }}
+        </a>
+      </div>
+      <!-- <div class="desktop__search">
+        <input type="text" placeholder="Buscar destino" />
+        <button>
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </div> -->
+
+      <div class="desktop__search">
+        <button (click)="logout()">
+          <span class="material-symbols-outlined"> log Out </span>
+        </button>
+      </div>
+
+      <div class="desktop__links-mini">
+        <button class="">
+          <span class="material-symbols-outlined">
+            <i class="fas">&#xf0c9;</i></span
+          >
+        </button>
+        <div class="submenu">
+          <a
+            >Favorite <i class="fas"> &#xf005; </i>
+            {{ todosForUser[0].favourite.length }}</a
+          >
+          <a href="#"
+            >Deleted <i class="fas"> &#xf1f8;</i>
+            {{ todosForUser[0].deleted.length }}</a
+          >
+
+          <a href="#"
+            >Completed <i class="fas">&#xf164;</i>
+            {{ todosForUser[0].completed.length }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div></div>
+</header>

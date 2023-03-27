@@ -1,0 +1,33 @@
+<div
+  class="body"
+  [ngClass]="theme == 1 ? 'standard' : theme == 2 ? 'light' : 'darker'"
+>
+  <app-nav> </app-nav>
+
+  <app-change-theme></app-change-theme>
+
+  <h1 id="title">
+    Just do it.
+    <div id="border"></div>
+  </h1>
+
+  <div class="container">
+    <div id="newTask">
+      <input
+        [(ngModel)]="textFeild"
+        id="taskInput"
+        type="text"
+        placeholder="Task to be done.."
+      />
+      <button id="push" (click)="addToDo()">ADD</button>
+    </div>
+    <div id="tasks">
+      <app-todo
+        *ngFor="let todo of todosForUser[0].todos; let i = index"
+        [todo]="todo"
+        [i]="i"
+        [id]="todo.id"
+      ></app-todo>
+    </div>
+  </div>
+</div>
